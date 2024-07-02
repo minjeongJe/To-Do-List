@@ -18,12 +18,10 @@ function moveUnderlineTo(target) {
     underLine.style.width = target.offsetWidth + "px";
 }
 
-
 addButton.addEventListener("click",addTask);
 taskInput.addEventListener("click", function() {
     taskInput.value = "";
 })
-
 
 function addTask () {
     let taskContent = taskInput.value;
