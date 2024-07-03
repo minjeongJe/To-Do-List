@@ -69,15 +69,63 @@ body {
     padding: 0px;   
 }
 
+/* task */
 .task {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
 }
 
-/* 버튼 */
+.taskList {
+    padding: 15px;
+}
+
+/* button */
 #add-button {
     border: none;
     background-color:  rgb(147, 163, 253);
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
 }
+
+.task-done > div:first-child {
+    text-decoration: line-through;
+}
+.task-done {
+   background-color: rgba(147, 163, 253, 0.418);
+}
+
+.task div {
+    display: flex;
+    align-items: center;
+}
+
+.task button {
+    background: rgba(206, 213, 252, 0.671);
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* icon */
+.task button i {
+    font-size: 30px;
+}
+
+.check {
+    color: rgb(124, 142, 245);
+}
+
+.delete {
+    color: rgb(199, 55, 55);
+}
+
+#add-button {
+    border: none;
+    background-color: rgb(147, 163, 253);
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
+
