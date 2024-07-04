@@ -9,6 +9,7 @@ body {
     background-color: rgba(216, 216, 248, 0.767);   
     font-family: "Cormorant", serif;
     font-optical-sizing: auto;
+    font-size: 19px;
 }
 
 .container {
@@ -18,15 +19,34 @@ body {
     max-width: 800px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-/* 입력란 */
+.container h1, .input-area {
+    padding: 20px;
+}
+
+/* input */
+.input-area {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    margin-bottom: 20px;
+}
+
 #task-input {
-    transition: padding-top 0.2s ease, margin-top 0.2s ease;
     width: 70%;
+    height: 30px;
     border: none;
     border: 1px solid rgb(147, 163, 253);
+    border-radius: 4px;
+    margin-right: 10px;
     margin-bottom: 30px;
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
 }
 
 #task-input:focus {
@@ -38,41 +58,41 @@ body {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-/* 메뉴 */
+/* menu */
 .task-area {
-    border: 1px solid rgb(147, 163, 253);
+    border-radius: 4px;
+    width: 75%;
 }
 
 .task-tabs {
     display: flex;
-    border-bottom: 1px solid rgb(147, 163, 253);
+    border-bottom: 1px solid rgb(17, 52, 255);
     position: relative;
+    margin-bottom: 25px;
 }
 
 .task-tabs > div {
     cursor: pointer;
-}
-
-.task-tabs div {
     padding: 1em;
 }
 
-/* 메뉴 밑줄 */
+/* menu UnderLine */
 #under-line {
     height: 4px;
     background-color: rgb(132, 160, 252);
     position: absolute;
-    width: 50px;
+    width: 61px;
     left: 0px;
-    top: 52px;
+    top: 63px;
     transition: 0.5s;
     padding: 0px;   
 }
 
 /* task */
 .task {
-    display: flex;
+    display: flex;           
     justify-content: space-between;
+    border-bottom: 1px solid rgb(147, 163, 253);
 }
 
 .taskList {
@@ -82,8 +102,17 @@ body {
 /* button */
 #add-button {
     border: none;
+    border-radius: 4px;
     background-color:  rgb(147, 163, 253);
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    width: 40px;
+    height: 30px;
+}
+
+#add-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px 0;
+    background-color:  rgb(122, 142, 250);
 }
 
 .task-done > div:first-child {
@@ -91,6 +120,7 @@ body {
 }
 .task-done {
    background-color: rgba(147, 163, 253, 0.418);
+   border-radius: 2px;
 }
 
 .task div {
@@ -110,13 +140,22 @@ body {
     padding: 0;
 }
 
-/* icon */
+/* btn-icon */
 .task button i {
     font-size: 30px;
 }
 
 .check {
     color: rgb(124, 142, 245);
+}
+
+.task button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px 0;
+}
+
+.task button:hover {
+    background: linear-gradient(45deg, rgb(250, 251, 252), rgb(215, 219, 241));
 }
 
 .delete {
@@ -128,4 +167,5 @@ body {
     background-color: rgb(147, 163, 253);
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
 }
+
 
